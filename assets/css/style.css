@@ -1,3 +1,21 @@
 a {
     color: white ;
 }
+.shopping-cart{
+    height: 100%;
+    width: 500px;
+    background-color: #343a40;
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    display: none;
+    overflow-x: hidden;
+    transition: 1.5s;
+}
+.closebtn{
+    color: white;
+    font-size: 30px;
+}
+.text-white{
+    color: white;
+}

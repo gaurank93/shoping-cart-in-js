@@ -16,11 +16,17 @@
       crossorigin="anonymous"
     />
     <!-- custom css -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
 
     <title>Shopping Cart In Js</title>
   </head>
   <body>
+      <!-- shopping cart -->
+      <div class="shopping-cart " id="cart">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeBar()">×</a>
+        <h1 class="text-white text-center">cart</h1>
+      </div>
+       <!-- shopping cart end -->
     <header>
       <nav class="navbar bg-dark justify-content-end">
         <ul class="nav">
@@ -32,21 +38,68 @@
                 width="24"
                 height="24"
               >
-                <path fill="#fff"
+                <path
+                  fill="#fff"
                   d="M7.75 6.5a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z"
                 ></path>
                 <path
-                  fill-rule="evenodd" fill="#fff"
+                  fill-rule="evenodd"
+                  fill="#fff"
                   d="M2.5 1A1.5 1.5 0 001 2.5v8.44c0 .397.158.779.44 1.06l10.25 10.25a1.5 1.5 0 002.12 0l8.44-8.44a1.5 1.5 0 000-2.12L12 1.44A1.5 1.5 0 0010.94 1H2.5zm0 1.5h8.44l10.25 10.25-8.44 8.44L2.5 10.94V2.5z"
                 ></path>
               </svg>
-              <span class="ml-2">Cart</span> </a
-            >
+              <span class="ml-2" onclick="openBar()">Cart</span>
+            </a>
           </li>
         </ul>
       </nav>
     </header>
-
+    <!-- product display  -->
+    <section class="mt-2">
+      <div class="container">
+        <h1>All Products</h1>
+        <div>
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th>S.No.</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Action</th>
+              </tr>
+              <tbody id="myTable">
+              </tbody>
+            </thead>
+          </table>
+        </div>
+      </div>
+    </section>
+    <!-- product display end  -->
+    <!-- product add  -->
+    <section class="mt-5">
+        <div class="container">
+        <h1>Add Product</h1>
+        <div class="row">
+            <div class="col-md-3">
+                <label for="name" class="control-lable">Product Id</label>
+                <input type="text" name="product_id" id="product_id" class="form-control">
+                 </div>
+        <div class="col-md-3">
+        <label for="name" class="control-lable">Name</label>
+        <input type="text" name="name" id="name" class="form-control">
+         </div>
+        <div class="col-md-3">
+        <label for="price" class="control-lable">Enter Price</label>
+        <input type="number" name="price" id="price" class="form-control">
+         </div>
+         <div class="col-md-3 m-auto">
+             <button class="btn btn-primary  mt-4" onclick="addProduct()">Add</button>
+         </div>
+        </div>
+        </div>
+    </section>
+    <!-- product add end -->
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
@@ -64,5 +117,6 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <script src="./assets/js/product.js"></script>
   </body>
 </html>
