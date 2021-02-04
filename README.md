@@ -1,1 +1,1 @@
-# shoping-cart-in-js
+# shopping-cart-in-js
